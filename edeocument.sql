@@ -88,12 +88,12 @@ CREATE TABLE IF NOT EXISTS `rp_user` (
   `student_class` tinyint(4) NOT NULL,
   `student_room` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ;
 
 --
 -- dump ตาราง `rp_user`
 --
 
-INSERT INTO `rp_user` (`id`, `username`, `password`, `status`, `permission`, `name`, `sex`, `id_card`, `address`, `phone`, `provinceID`, `zipcode`, `visited`, `lastvisited`, `session_id`, `ip`, `create_date`, `student_id`, `student_class`, `student_room`) VALUES
-(1, 'admin@localhost', 'b620e8b83d7fcf7278148d21b088511917762014', 1, 'can_config,can_login,can_config_person,can_handle_all_edocument,can_upload_edocument,can_manage_student', 'แอดมิน', 'm', '', '1 หมู่ 1 ตำบล ลาดหญ้า อำเภอ เมือง', '08080808', '102', '71190', 129, 1500859625, '5c3m75kuhqul4it0csphdsjt57', '110.171.14.233', '0000-00-00 00:00:00', NULL, 0, 0),
-(2, 'demo@localhost', 'db75cdf3d5e77181ec3ed6072b56a8870eb6822d', 2, 'can_login,can_upload_edocument', 'ช่างซ่อม 1', 'f', '', '', '0123456788', '101', '', 64, 1500861025, '6cia51jagqk8l1fco4otro5uh2', '203.150.21.77', '2017-07-02 08:10:30', NULL, 0, 0),
+INSERT INTO `rp_user` (`id`, `username`, `password`, `status`, `permission`, `name`, `sex`, `id_card`, `address`, `phone`, `provinceID`, `zipcode`, `visited`, `lastvisited`, `session_id`, `ip`, `create_date`) VALUES
+(1, 'admin@localhost', 'b620e8b83d7fcf7278148d21b088511917762014', 1, 'can_config,can_login,can_handle_all_edocument,can_upload_edocument', 'แอดมิน', 'm', '', '1 หมู่ 1 ตำบล ลาดหญ้า อำเภอ เมือง', '08080808', '102', '71190', 138, 1500887470, '', '', '0000-00-00 00:00:00'),
+(2, 'demo@localhost', 'db75cdf3d5e77181ec3ed6072b56a8870eb6822d', 2, 'can_login,can_upload_edocument', 'ช่างซ่อม 1', 'f', '', '', '0123456788', '101', '', 83, 1500887481, '', '', '2017-07-02 08:10:30');
