@@ -40,17 +40,11 @@ class View extends \Gcms\View
       /* Model */
       'model' => \Edocument\Report\Model::toDataTable($index->id),
       /* คอลัมน์ที่ไม่ต้องแสดงผล */
-      'hideColumns' => array('id', 'document_id'),
+      'hideColumns' => array('id'),
       /* รายการต่อหน้า */
       'perPage' => $request->cookie('edocument_perPage', 30)->toInt(),
-      /* query where */
-      'defaultFilters' => array(
-        array('document_id', $index->id)
-      ),
       /* ฟังก์ชั่นจัดรูปแบบการแสดงผลแถวของตาราง */
       'onRow' => array($this, 'onRow'),
-      /* คอลัมน์ที่สามารถค้นหาได้ */
-      'searchColumns' => array('topic', 'document_no', 'sender'),
       /* ส่วนหัวของตาราง และการเรียงลำดับ (thead) */
       'headers' => array(
         'status' => array(

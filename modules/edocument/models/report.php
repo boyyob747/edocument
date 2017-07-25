@@ -45,10 +45,10 @@ class Model extends \Kotchasan\Model
     // Model
     $model = new static;
     return $model->db()->createQuery()
-        ->select('D.member_id id', 'U.status', 'U.name', 'D.last_update', 'D.downloads', 'D.document_id')
+        ->select('D.id', 'U.status', 'U.name', 'D.last_update', 'D.downloads')
         ->from('edocument_download D')
         ->join('user U', 'LEFT', array('U.id', 'D.member_id'))
-        ->where(array('D.id', $id))
+        ->where(array('D.document_id', $id))
         ->order('D.last_update DESC');
   }
 }
